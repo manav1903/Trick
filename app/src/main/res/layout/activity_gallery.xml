@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/diary9">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/linear"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="match_parent"
+    android:background="@color/blackTrans"
+    android:layout_height="50dp">
+    <ImageView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        />
+<TextView
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:text="Gallery"
+    android:textAlignment="center"
+    android:textColor="@color/white"
+    android:textSize="30sp"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>
+<TextView
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:id="@+id/add"
+    android:layout_marginBottom="20dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
+    android:text="Add from Gallery"
+    android:textAlignment="center"
+    android:background="@color/blue"
+    android:gravity="center"
+    android:textSize="22sp"
+    android:textColor="@color/white"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:drawableStartCompat="@drawable/ic_baseline_add_photo_alternate_24" />
+    <GridView
+        android:id="@+id/select"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="6dp"
+        android:backgroundTintMode="multiply"
+        android:clickable="true"
+        android:columnWidth="15dp"
+        android:elevation="8dp"
+        android:focusable="true"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:listSelector="@color/blue"
+        android:numColumns="4"
+        app:layout_constraintTop_toBottomOf="@id/linear"
+        app:layout_constraintBottom_toTopOf="@id/add"
+        android:paddingTop="20dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="1dp"
+        tools:listitem="@layout/gallery_item" />
+<LinearLayout
+    android:visibility="gone"
+    android:id="@+id/progress"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:elevation="20dp"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="20dp"
+    android:paddingStart="50dp"
+    android:paddingEnd="50dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fetching"
+        android:textSize="23sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        />
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/diary9"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:menu="@menu/home_menu"
+        android:background="@color/blackTrans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white" >
+
+    </androidx.appcompat.widget.Toolbar>
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/upbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/rotate"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:src="@drawable/ic_baseline_flip_camera_android_24"-->
+<!--            android:contentDescription="@string/app_name"/>-->
+<!--        <ImageView-->
+<!--            android:id="@+id/save"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:src="@drawable/ic_baseline_save_alt_24"-->
+<!--            android:contentDescription="@string/app_name"/>-->
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/container"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintDimensionRatio="3:4"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/dock"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/upbar">-->
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            app:layout_constraintDimensionRatio="3:4"
+            android:layout_width="0dp"
+            android:background="@color/blackTrans"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/switched"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+
+            </androidx.camera.view.PreviewView>
+    <!--    </FrameLayout>-->
+
+    <ImageView
+        android:id="@+id/captured"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toTopOf="@id/switched"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+<LinearLayout
+    android:id="@+id/switched"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+app:layout_constraintBottom_toTopOf="@id/dock"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:background="@color/blackTrans"
+    android:divider="@color/white"
+android:weightSum="2"
+    app:layout_constraintStart_toStartOf="parent"
+    android:orientation="horizontal">
+<TextView
+    android:id="@+id/video"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:textSize="17sp"
+    android:textColor="@color/white"
+    android:text="@string/video"
+    android:textAlignment="center"
+    />
+    <TextView
+        android:id="@+id/photo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_900"
+        android:layout_weight="1"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:text="@string/photo"
+        android:textAlignment="center"
+        />
+
+
+
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/dock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blackTrans"
+        android:weightSum="3"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/rotate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_flip_camera_android_24"
+            android:contentDescription="@string/app_name"/>
+        <ImageView
+            android:id="@+id/capture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_circle_24"
+            android:contentDescription="@string/app_name"/>
+
+        <ImageView
+            android:id="@+id/captureVideo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_video_camera_back_24"
+            android:contentDescription="@string/app_name"/>
+        <ImageButton
+            android:background="@android:color/transparent"
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_photo_size_select_actual_24"
+            android:contentDescription="@string/app_name"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

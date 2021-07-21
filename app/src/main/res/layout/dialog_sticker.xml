@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@drawable/diary9"
+        android:layout_width="match_parent"
+        android:layout_height="650dp">
+        <GridView
+            android:id="@+id/select"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="6dp"
+            android:numColumns="3"
+            android:padding="15dp"
+            android:verticalSpacing="6dp" />
+    </RelativeLayout>
+</RelativeLayout>

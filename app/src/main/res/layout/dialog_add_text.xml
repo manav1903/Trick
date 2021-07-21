@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@drawable/diary9"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <EditText
+            android:id="@+id/textarea"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:hint="@string/enter_your_text_here" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textarea"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/add"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="@string/cancel"
+                android:textColor="#fff" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="Choose Text color:"
+                android:textSize="15sp"
+                android:textColor="#fff" />
+            <Spinner
+                android:id="@+id/color"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+<!--        <Spinner-->
+<!--            android:id="@+id/color"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_width="160dp"-->
+<!--            -->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_below="@id/linear"-->
+<!--            android:background="@color/white"-->
+<!--            />-->
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:weightSum="2"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/emoji"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="Emoji's"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        app:drawableTopCompat="@drawable/ic_baseline_add_reaction_24" />
+
+    <TextView
+        android:id="@+id/acc"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:text="Accessories"
+        android:textSize="26sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        app:drawableTopCompat="@drawable/ic_baseline_remove_red_eye_24" />
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/hair"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Hair Style"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            app:drawableTopCompat="@drawable/ic_hair" />
+
+        <TextView
+            android:id="@+id/all"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="All"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            app:drawableTopCompat="@drawable/ic_baseline_grid_view_24" />
+
+    </LinearLayout>
+
+</LinearLayout>
